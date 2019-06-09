@@ -1666,7 +1666,10 @@
     \fi
   \fi
 \else
-  \renewcommand\contentsname{CONTENTS}
+  \renewcommand{\contentsname}{CONTENTS}
+  \renewcommand{\listfigurename}{FIGURES}
+  \renewcommand{\listtablename}{TABLES}
+  \renewcommand{\bibname}{REFERENCES}
   \newcommand\thu@denotation@name{ABBREVIATIONS}
   \newcommand\listequationname{List of Equations}
   \newcommand\equationname{Equation}
@@ -1684,7 +1687,7 @@
   \newcommand\thu@conjecture@name{Conjecture}
   \newcommand\thu@proof@name{proof}
   \newcommand\thu@theorem@separator{: }
-  \newcommand\thu@ack@name{Acknowledgments}
+  \newcommand\thu@ack@name{ACKNOWLEDGEMENTS}
   \ifthu@bachelor
     \newcommand\thu@resume@title{Research Achievements}
   \else

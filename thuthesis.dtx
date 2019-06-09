@@ -1666,6 +1666,7 @@
     \fi
   \fi
 \else
+  \renewcommand\contentsname{CONTENTS}
   \newcommand\thu@denotation@name{ABBREVIATIONS}
   \newcommand\listequationname{List of Equations}
   \newcommand\equationname{Equation}
@@ -2149,7 +2150,7 @@
   chapter={
     afterindent=true,
     pagestyle={\ifthu@bachelor thu@plain\else thu@headings\fi},
-    beforeskip={\ifthu@bachelor 15bp\else 9bp\fi},
+    beforeskip={\ifthu@bachelor 30bp\else 9bp\fi},
     aftername=\hskip\ccwd,
     afterskip={\ifthu@bachelor 20bp\else 24bp\fi},
     format={\centering\sffamily\ifthu@bachelor\xiaosan[1.333]\else\sanhao[1]\fi},

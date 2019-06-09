@@ -1666,7 +1666,7 @@
     \fi
   \fi
 \else
-  \newcommand\thu@denotation@name{Nomenclature}
+  \newcommand\thu@denotation@name{ABBREVIATIONS}
   \newcommand\listequationname{List of Equations}
   \newcommand\equationname{Equation}
   \newcommand\thu@assumption@name{Assumption}
@@ -3017,6 +3017,7 @@
 %    \begin{macrocode}
 \newenvironment{denotation}[1][2.5cm]{%
   \thu@chapter*[]{\thu@denotation@name} % no tocline
+  \addcontentsline{toc}{chapter}{\thu@denotation@name}
   \vskip-30bp\xiaosi[1.6]\begin{thu@denotation}[labelwidth=#1]
 }{%
   \end{thu@denotation}

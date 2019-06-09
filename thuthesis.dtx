@@ -2627,12 +2627,17 @@
       \vskip2.2cm\hskip0.8cm
       \noindent\heiti\xiaoer\thu@bachelor@title@pre\thu@title@sep
       \parbox[t]{12cm}{%
-      \ignorespaces\yihao[1.51]%
-      \renewcommand{\CJKunderlinebasesep}{0.25cm}%
-      \renewcommand{\ULthickness}{1.3pt}%
-      \xeCJKsetup{underline/format=\color{black}}%
-      \CJKunderline*{\thu@ctitle}}%
-      \vskip1.3cm
+        \ignorespaces\yihao[1.51]%
+        \renewcommand{\ULthickness}{1.3pt}%
+        {
+        \renewcommand{\CJKunderlinebasesep}{0.25cm}%
+        \xeCJKsetup{underline/format=\color{black}}%
+        }
+        \CJKunderline*{\thu@ctitle}\\
+        \setul{}{1.3pt}
+        \ul\thu@etitle
+      }%
+      \vskip0.1cm
     \else
       \vskip0.8cm
       \parbox[t][9cm][t]{\paperwidth-8cm}{

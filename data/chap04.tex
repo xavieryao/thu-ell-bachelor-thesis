@@ -1,0 +1,121 @@
+\engchapter{Results and Discussion}
+
+\subsection{Overview of the Corpus}
+This chapter presents the results with regard to the citation behaviors of Chinese computer science (CS) graduate students when writing research papers. Here the papers are referred to as text (abbreviation: TXT) with a corresponding number (i.e. TXT1 - TXT11). After the textual analysis, we excluded two of the research papers, namely TXT8 and TXT11, from the corpus for the following reasons: TXT8 is a survey, which is of a different genre from normal CS research papers, and would affect the accuracy of the quantitative analysis of the citation behaviors of typical research papers. TXT11 contains no citation at all across the whole text, which generally did not follow the requirements and common practices of the academia. By the time of this research, 6 out of 11 of them have already been published in scholarly peer-reviewed conference proceedings and journals. The overview of the corpus is shown in Table 4.1.
+
+%TODO Table 4.1
+
+Although the various sections in these research papers did not appear in the same order or with the same subtitles, they can be classified into introduction (including background and rationale), related works, preliminaries (including problem definition), method (including model), experiment (including result and discussion), and conclusion. All the papers analyzed in this study, except TXT8, which is a literature review, fit this framework well.
+
+\section{Citation Quality}
+Citation quality is related to at least four aspects: whether the citation should be considered as plagiarism, whether the writer can contextualize different sources, the sources used by the writers, and citation density.
+
+None of the students made unintentional plagiarism in the form of patchwriting or direct copying. They generally concluded the sources they cited by summarizing the method used in their own words. We speculate that the citation functions of CS research papers make it hard to induce plagiarism, because most of the time the writer is just attributing a method to the cited author, instead of paraphrasing a proposition. This distinguishing feature is discussed further in Section 4.4. One exception is TXT4, where the writer made no citations when referring to either the datasets they used or the baseline models they compared themselves with.
+
+However, some writers did not appear to be able to produce proper paraphrasing and summarization. As mentioned by Hyland (2005), writers have to establish links between sources and to make connections with their own study. However, in the literature review section of TXT3, the writer merely listed related works without any attempt to make connections among them or with his or her own research. This is also further discussed in Section 4.3.4 regarding the reporting verbs and forms used, and in Section 4.3 regarding the citation functions.
+
+As for sources, the distribution of the H5-indices of the sources of each research paper is listed in Table 4.2. On average, 74.5\% of the sources of each research paper are from conferences or journals with an H5-index greater than 13. In addition, averagely 5.7\% of the works cited are from journals or conferences with a small H5-index, but these journals and conferences are still published or organized by authoritative organizations like ACM and IEEE. 7.1\% of the sources are not from journals or conferences, but are also very reliable as they are PhD theses, academic monographs, technical reports, or international standards. The remainder of the sources are electronic preprints and websites describing software, which might not be perfectly credible as they were not peer-reviewed. The times that the sources were cited are illustrated in Table 4.3, where we can see that the majority of the sources (56\%) were cited 50 to 250 times, and 82.8\% of the sources were cited more than 10 times. It is safe to conclude from the statistics that most of the sources, except for the preprints and websites, are credible.
+
+% TODO Table 4.2
+
+% TODO Table 4.3
+
+The citation style guidelines the writers used are summarized in Section 4.3.1. A small fraction of the citations did not follow the style guides strictly. For example, in TXT2, when a citation involves multiple sources, only 14 out of 26 citations used the correct style. The mistakes can be divided into three categories. According to the ACM style guide which all papers except TXT1 and TXT5 followed, when the cited author is part of a sentence, the number of the citation should follow the cited author’s name directly, instead of being placed at the end of a sentence. For example, in the instance \textit{Lin et al. proposed a routing algorithm minimizing the weighted sum of the maximum and total channel lengths [11]} (TXT3), \textit{[11]} should be placed directly after Lin et al. The second mistake they made is that sequential parenthetical citations should be in the same square bracket like \textit{[1, 2]} in ACM style, but some of the writers put them in separate square brackets (e.g. TXT7 and TXT8). The third mistake they made is that there were missing or excessive spaces, periods, and commas around the parenthetical citations. For example, in TXT1, the writer mistakenly put a parenthetical citation after the period (\textit{Hence, the need to transition from IPv4 to IPv6 becomes quite urgent. [1]}, TXT1). In some cases, the writers put spaces around parenthetical citations while in others not, as shown in the following example:
+
+\textit{Existing translation technologies (such as IVI [2], NAT64 [3], etc.) and tunneling technologies (such as 6RD [4], Lightweight 4over6[5], etc.) provide possibilities for communication between IPv4/IPv6 single-stack devices.} (TXT1)
+
+We counted the number of citations in the body of the research papers and calculated the number of citations in the body per 1000 words as the citation density, which is illustrated in Table 4.4. The number ranges from 9.9 to 2.0, with an average of 5.8. These numbers are significantly lower than those reported in other research (Fazel \& Shi, 2015; Samraj, 2013; Wette, 2017), which is acceptable because research papers in some engineering disciplines are required to describe the method, experiment and results in great detail, while the literature review and discussion sections of the papers in these disciplines are relatively brief, thereby containing only a small number of citations. The variation of the papers is very large. As indicated in Table 4.4, some papers contain fewer citations (e.g. TXT 4 and TXT 10).
+
+%TODO Table 4.4
+\section{Citation Forms}
+\subsection{Style and Format}
+The research papers used in this study followed three different citation style guidelines in total, and these three guidelines are from the three largest research communities of Chinese CS researchers. As shown in Table 4.1, nine research papers followed the citation style guideline of the Association for Computing Machinery (ACM). One paper (TXT5) used APA style, which is mandatory by the Association for the Advancement of Artificial Intelligence (AAAI). One (TXT1) followed GB/T 7714-2015 (Information and Documentation Rules for Bibliographic References and Citations to Information Resources), the national recommended standard for citation style, which is widely used in theses, dissertations, and most periodicals in Chinese. The mistakes made in following style and format guidelines were discussed in Section 4.2.
+
+\subsection{Type of Forms}
+According to Thompson (2001), citations can be classified as either integral or non- integral citations. Integral citations are parts of a sentence while non-integral citations serve as annotations after a complete sentence. In accordance with Samraj (2013), most research papers and master theses contain more non-integral citations than integral citations. However, this is not the case for the papers in our corpus composed by CS graduate students. As shown in Table 4.5, integral citations (appeared 224 times in total) are much more frequently observed than non-integral citations (appeared 76 times in total) in these papers. The writers used naming (citation as a free-standing noun phrase, or following a linking verb) and verb controlling (citation following a notional verb) frequently to refer to other researchers’ works. For example, they often used naming (integral citation) to state the method they adopted, as shown in the following example:
+
+\textit{Existing decoding methods usually adopt the threshold (e.g. different amplitude ranges for different symbols in WiZig [3] and the signal similarity in WEBee [7]).} (TXT7)
+
+% TODO: Table 4.5
+
+In literature review sections, the writers often need to use verb controlling integral citations to introduce the methods used in other works, instead of frequently introducing other people’s propositions. The following excerpt is a typical example of this use:
+
+\textit{Serban et al. [29] proposed a hierarchical end-to-end generative dialog system to model utterances and speech acts. (TXT9, X. Li et al., 2018)}
+
+Non-integral citations in the papers are largely limited to the circumstances where the writers wish to refer to a proposition by others, and the proportion of non-integral citations in our corpus is smaller compared with other disciplines in previous studies (Hyland, 1999; Samraj, 2013). A typical example of this kind of non-integral citation is:
+
+\textit{It has been observed that image data has various density in different parts of feature space (Socher et al. 2013; Guo et al. 2017a)} (TXT5, Yuchen et al., 2019)
+
+\subsection{Placement}
+As shown in the quantitative analysis in Table 4.6, most citations (79.1\%) appeared in the introduction section and related works section. There were a few citations in the method section (9.0\%) and the experiment and discussion section (11.9\%). For all the papers we analyzed, no one had any citation in the conclusion part. As explained by Mansourizadeh \& Ahmad (2011), for experimental papers the conclusion part is only a small section where the main findings are concluded and the concluding points are presented, therefore there is generally no need for citations.
+
+% TODO: Table 4.6
+
+\subsection{Reporting Verbs and Expressions}
+Some commonly used reporting verbs and expressions for citing propositions and findings of others are: \textit{according to, it is well accepted that, it is widely agreed that, it has been observed that, as suggested by, it is shown that, it is proven that}, and \textit{someone pointed out}. When comparing and evaluating multiple sources, commonly used expressions are: \textit{... is another ...., has similar settings, similar ... are also used in ...}. Since the most frequently adopted function of citation is to introduce or summarize the method, algorithm, technique or model used in other researchers’ works (\textit{Attribution}), most citations are in the form of a verb controlling integral citation, as exemplified by the following instance:
+
+\textit{In 2018, Pei et. al. [10] proposed a machine learning method to address the chaining problem in NFV.} (TXT8, Yi et al., 2018)
+
+The most frequently used expression is \textit{someone proposed some method}. It was used so frequently that in an extreme case (TXT3), the whole literature review section was composed by as many as 19 cascading sentences with exactly the same pattern as the following excerpt:
+
+\textit{... Roy et al. proposed a layout-aware sample preparation algorithm for reactant minimization (RMA) [23]. Kumar et al. proposed single-target multi-demand mixture preparation algorithm [24]. Shao et al. proposed a look-up table based sample preparation algorithm for fast online sample preparation [25]. ...} (TXT3, Ji, Ho, \& Yao, 2018)
+
+There are, however, more choices in the verbs to use for this kind of citation. As best illustrated by TXT5 and TXT8, verb controlling citations can be very effective and eloquent with a combination of verbs. Beside using \textit{propose}, writers also used \textit{apply, exploit, employ, adopt, use, leverage}, and \textit{utilize} to summarize the methods used in other researchers’ works. When referring to a survey or literature review, \textit{summarize} was also used. Even better, a writer described directly the methods other researchers applied as follows:
+
+\textit{ESense [2] modulates symbols by packet lengths and accomplishes CTC from WiFi to ZigBee. HoWiEs [11] improves Esense by using combinations of WiFi packets. GSense [12] embeds symbols into gaps between customized packet preambles.} (TXT7)
+
+\section{Citation Functions}
+Seven out of eight functions in the typology of Petrić (2007) have been identified in the corpus. The frequencies and distribution of these functions of citations are shown in Table 4.6.
+
+\subsection{Attribution}
+Citations of attribution are used to attribute information (a conclusion, proposition, hypothesis, or remark) or activity (to propose a new method, to define a new concept, or to propose a new research problem) (Petrić, 2007), and attribution is the most common type in our corpus. Only when the writer attributed in order to introduce the background or support his or her own argument was the citation be classified as Attribution, otherwise it was classified as Statement of Use, Application, or others. As mentioned in Section 4.2, we speculate that many CS studies rely heavily on previous methods in order to propose new methods. Therefore, a large portion of citations were used to introduce other works. In addition to describing related methods, when stating the problem background and the rationale of their proposed solutions, the writers relied on the theories and findings of previous research. This explains why citations of attribution are mainly distributed in the introduction, rationale, and literature review sections. The overall distribution statistics are shown in Table 4.6. Most of the citations of this type are in the introduction (30.9\%) section and the related works section (58.3\%).
+
+\subsection{Exemplification}
+This kind of citations was signified by \textit{for example} and was used to provide examples (Petrić, 2007), and consists of 10.2\% of all citations. Here is an instance:
+
+\textit{For example, Google started project OSS-Fuzz [10], which offers fuzz-as-a-service for open-source organizations.} (TXT6, Liang et al., 2018)
+
+\subsection{Further Reference}
+Marked by \textit{see} and \textit{refer to}, this kind of citations directs the reader to a source for further reference (Petrić, 2007). However, no citation of this type appeared in the corpus. We speculate that all the information the writers need was summarized, and hence there was no need for this kind of citations.
+
+\subsection{Statement of Use}
+This type of citations occurred most frequently (57.1\%) in the experiment section, as when conducting experiments researchers in CS inevitably need to utilize common experimental techniques and follow well-established benchmarks and evaluation standards. In addition, those research papers we studied also used citations to state the datasets, platforms, notations, tools, and software they used. A simple example would be:
+
+\textit{We use CSITool [19] to collect the CSI samples with an average sampling frequency of 5KHz.} (TXT7)
+
+However, there are certain research papers (e.g. TXT4) that did not use citations when stating the use of datasets and models and shall be considered as misconduct as analyzed in Section 4.2.
+
+\subsection{Application}
+When establishing their own work on the foundation of a previous work, or proposing a new method by combining others, writers used this type of citation. Of course, citations of this type imply attribution of credit to the original author, and this type is a special case of Attribution. As a consequence, this type of citations only appeared when a writer was describing the proposed method (in the introduction or method sections). Citations of this type were often associated with \textit{based on, extend, adapt, follow}, and \textit{combine}. For example:
+
+\textit{The proposed countermeasures against JIT-ROP exploits work based on the mechanism of execute-only memory (XOM) [23, 24]} (TXT2)
+
+\subsection{Evaluation}
+Sometimes the writers commented on the cited work directly with evaluative language, for example: \textit{Although the random design methodology is efficient in resolving existing design challenges, we observe that there are critical drawbacks in the randomly-designed chips in [3]} (TXT3). This type of citations appeared in the introduction section to stress how important the current work is, and in the experiment section to explain why the current solution performed better than other baselines. It is worth noting that only when the writer directly evaluated a work was the correspondent citation marked as evaluation. But for the research papers examined, in the literature review section, the writers usually just enumerated different approaches related works took, and made a final remark on all the works cited. For example, as shown in the excerpt from TXT3 below, the writer listed 10 previously proposed models (7 of them omitted) and only evaluated them briefly in the last sentence.
+
+\textit{...... Yao et al. proposed the first co-design concept, which simultaneously considers both flow layer design and control-layer design [13]. Grimmer et al. proposed a SAT- based placement and routing method to minimize the number of flow-channel crossings [14]. Tseng et al. proposed an integer linear programming model for dynamic device mapping and fluid routing for flow-based microfluidic biochips [15]. Existing works rarely perform simulations on the designed layouts, which may cause functional failure after fabrication of the real chips.} (TXT3, Ji, Ho, and Yao., 2018)
+
+Citations of this type were not classified as Evaluation but as Attribution.
+
+\subsection{Establishing Links}
+When a writer synthesizes multiple sources, he or she uses citations with the intention of establishing links. Citations of this kind were only spotted in the introduction and related works sections, where the writers synthesized multiple sources. Similar to evaluation, establishing links is another aim of literature reviews, and is usually done by leading sentences or ending remarks of paragraphs in the related works section. It is observed that the ratio of citations using multiple sources simultaneously (using synthesis) is relatively low (only 10.2\% of all citations used multiple sources). In addition, it is worth mentioning that 67\% of the research papers started with a sentence that summarizes the state of the research area by establishing links across various studies and applications.
+
+\subsection{Comparison}
+Samraj (2013) pointed out that the comparison of results is the most salient type of citation function in the discussion section. It is indeed true in the case of our group of CS graduate students. Comparisons are used to compare the result of the writer’s approach with other researchers’ approaches, which explains why they appeared most frequently (85.6\%) in method, experiment, result, and discussion sections. They were signified by \textit{similar to, compared with}, and \textit{consistent with}.
+
+\section{Discussion}
+The results of the analysis serve as a miniature of the citation behaviors of Chinese CS graduate students when writing research papers. Generally, the citation behaviors across the 11 papers studied vary sharply, from the surface forms to citation density and source quality.
+
+From the samples collected, we can see that this group of writers have the basic knowledge of citations and are able to make proper citations by avoiding intentional and unintentional plagiarisms and referring to reputable sources. But they might occasionally commit plagiarism when it involves datasets and baseline models.
+
+Compared with the results of other research (Fazel \& Shi, 2015; Samraj, 2013; Wette, 2017), this set of Chinese CS graduate students’ research papers has a lower citation density (5.8 per 1000 words on average and with a maximum of 9.9, while in Samraj’s study the average number is 11.97). We speculate that many CS studies are experimental and the research papers reporting those studies need to describe the novel method, experiment, and results in greater details, leaving less space for the literature review section (The area of the research papers studied by Samraj (2013), for example, is biology). This speculation is confirmed by the findings of Hyland (1999). He found that research papers in the engineering and natural science subjects (e.g. civil engineering and computer science) generally have a smaller citation density, while research papers in humanities and social sciences (e.g. sociology and applied linguistics) have a greater one. He also found that engineering and natural science researchers hardly use direct quotations, while researchers in humanities and social sciences would quote others verbatim. This finding coincides well with the finding of our study (no direct quotations observed).
+
+From the results of the analysis, we can see that only a small portion of citations (10.4\% of all citations) involve synthesizing multiple sources (classified as having the citation function establishing links between sources). This signals a possible deficiency of synthesizing skills of Chinese CS graduate students. This possible deficiency is explainable as synthesizing and summarizing are generally harder citing techniques compared with paraphrasing which only involves one source of information. This difficulty results from the simultaneous involvement of multiple cognitive processes, including reflection, planning, evaluation and revision (Bereiter \& Scardamalia, 2013; T. A. Hyland, 2009; Kirkland \& Saunders, 1991; Segev-Miller, 2007) when synthesizing and summarizing. However, a successful writer needs to use synthesizing and summarizing to construct the background of his or her own study (Swales, 1990).
+
+Therefore, Chinese CS graduate students may need more training and practice on synthesizing and summarizing, and raise their awareness to use them.
+
+Besides, less than 11.3\% of the citations involve evaluating others (13 citations used to evaluate other’s works and 14 to compare other’s results with the writers’ own). In Swales’ (1990) citation model, only when evaluating others will the writers be able to show the necessity and significance of their own research. Therefore, the lack of evaluation could be another deficiency of Chinese CS graduate students when using citations. This phenomenon corresponds well with the findings of Hyland (2002) and Liu \& Thompson (2009) that Chinese undergraduates and scholars tend to evaluate less in academic writings in both English and Chinese, which might relate to Chinese culture.
+
+The analysis of citation form has shown that some students are struggling with diction and the choice of expressions when making citations, while some are already able to produce fluent and expressive passages synthesizing multiple sources and contextualizing their own arguments. The struggling with the vocabulary of reporting verbs is common for non-native writers (Schmitt, 2007; G. Thompson \& Ye, 1991) and Chinese L2 writers sometimes have to copy words from sources (Shi, 2004), and here we could infer its existence in Chinese CS graduate students. This phenomenon also implies a novice writer’s lack of the awareness to avoid duplication in writing or the ignorance of approaches to prevent duplication.
+
+Graduate students generally spend most of their time on their own discipline (Davis, 2013), which might account for the deficiencies in using citations of Chinese CS graduate students. As it is vital in academic communities to use English to write proper research papers, students, especially L2 students like Chinese CS graduate students, should spare more time sharpening their academic writing skills, and the graduate programs should also include a substantial amount of training in academic writing.

@@ -1,0 +1,28 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "thuthesis",
+            "tools": ["latexmk-thuthesis"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk-thuthesis",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-file-line-error",
+                "-interaction=nonstopmode",
+                "-pv-",
+                "-pvc-",
+                "-outdir=%OUTDIR%",
+                "main"
+            ],
+            "env": {}
+        }
+    ],
+    "editor.wordWrap": "on",
+    "latex-workshop.latex.outDir": "out",
+    "latex-workshop.latex.bibDirs": ["ref"]
+}

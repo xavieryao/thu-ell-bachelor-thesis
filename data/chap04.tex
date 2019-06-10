@@ -1,9 +1,31 @@
 \engchapter{Results and Discussion}
 
 \section{Overview of the Corpus}
-This chapter presents the results with regard to the citation behaviors of Chinese computer science (CS) graduate students when writing research papers. Here the papers are referred to as text (abbreviation: TXT) with a corresponding number (i.e. TXT1 - TXT11). After the textual analysis, we excluded two of the research papers, namely TXT8 and TXT11, from the corpus for the following reasons: TXT8 is a survey, which is of a different genre from normal CS research papers, and would affect the accuracy of the quantitative analysis of the citation behaviors of typical research papers. TXT11 contains no citation at all across the whole text, which generally did not follow the requirements and common practices of the academia. By the time of this research, 6 out of 11 of them have already been published in scholarly peer-reviewed conference proceedings and journals. The overview of the corpus is shown in Table 4.1.
+This chapter presents the results with regard to the citation behaviors of Chinese computer science (CS) graduate students when writing research papers. Here the papers are referred to as text (abbreviation: TXT) with a corresponding number (i.e. TXT1 - TXT11). After the textual analysis, we excluded two of the research papers, namely TXT8 and TXT11, from the corpus for the following reasons: TXT8 is a survey, which is of a different genre from normal CS research papers, and would affect the accuracy of the quantitative analysis of the citation behaviors of typical research papers. TXT11 contains no citation at all across the whole text, which generally did not follow the requirements and common practices of the academia. By the time of this research, 6 out of 11 of them have already been published in scholarly peer-reviewed conference proceedings and journals. The overview of the corpus is shown in Table \ref{tab:corpus_overview}.
 
-%TODO Table 4.1
+\begin{table}[htbp]
+    \caption{Overview of the corpus}
+    \centering
+      \begin{tabular}{ccccc}
+        \toprule[1.5pt]
+        \textbf{Paper No.} & \textbf{Published} & \textbf{Style} & \textbf{Area} & \textbf{Remark} \\
+        \midrule[1pt]
+        1   &No&GB&Network&-\\
+        2	&No	&ACM	&Security	&-\\
+        3	&Yes	&ACM	&Electronic Design Automation	&-\\
+        4	&Yes	&ACM	&Artificial Intelligence	&-\\
+        5	&Yes	&APA	&Artificial Intelligence	&-\\
+        6	&Yes	&ACM	&Software Engineering&	-\\
+        7	&No	&ACM	&Internet of Things	&-\\
+        8	&Yes	&ACM	&Network	&Survey\\
+        9	&Yes	&ACM	&Artificial Intelligence	&-\\
+        10	&No	&ACM	&Human-Computer Interaction	&-\\
+        11	&No	&ACM	&Artificial Intelligence	&No citation\\
+        
+      \bottomrule[1.5pt]
+    \end{tabular}
+    \label{tab:corpus_overview}
+  \end{table}
 
 Although the various sections in these research papers did not appear in the same order or with the same subtitles, they can be classified into introduction (including background and rationale), related works, preliminaries (including problem definition), method (including model), experiment (including result and discussion), and conclusion. All the papers analyzed in this study, except TXT8, which is a literature review, fit this framework well.
 
@@ -14,42 +36,150 @@ None of the students made unintentional plagiarism in the form of patchwriting o
 
 However, some writers did not appear to be able to produce proper paraphrasing and summarization. As mentioned by Hyland (2005), writers have to establish links between sources and to make connections with their own study. However, in the literature review section of TXT3, the writer merely listed related works without any attempt to make connections among them or with his or her own research. This is also further discussed in Section 4.3.4 regarding the reporting verbs and forms used, and in Section 4.3 regarding the citation functions.
 
-As for sources, the distribution of the H5-indices of the sources of each research paper is listed in Table 4.2. On average, 74.5\% of the sources of each research paper are from conferences or journals with an H5-index greater than 13. In addition, averagely 5.7\% of the works cited are from journals or conferences with a small H5-index, but these journals and conferences are still published or organized by authoritative organizations like ACM and IEEE. 7.1\% of the sources are not from journals or conferences, but are also very reliable as they are PhD theses, academic monographs, technical reports, or international standards. The remainder of the sources are electronic preprints and websites describing software, which might not be perfectly credible as they were not peer-reviewed. The times that the sources were cited are illustrated in Table 4.3, where we can see that the majority of the sources (56\%) were cited 50 to 250 times, and 82.8\% of the sources were cited more than 10 times. It is safe to conclude from the statistics that most of the sources, except for the preprints and websites, are credible.
+\begin{table}[htb]
+    \caption{H5-index distribution of the sources}
+    \centering
+      \begin{tabular}{ccccccccc}
+        \toprule[1.5pt]
+        \textbf{Paper No.} &	\textbf{Other}&	\textbf{I/A}&	\textbf{13-20}&	\textbf{20-30}&	\textbf{30-40} & \textbf{40-50} &\textbf{50+}	&\textbf{Other reliable} \\
+        \midrule[1pt]
+        1	&13.3\%	&13.3\%	&6.7\%&	0.0\%	&13.3\%	&6.7\%	&20\%	&26.7\% \\
+        2	&15.7\%	&3.9\%	&7.8\%	&17.6\%	&11.8\%	&35.3\%	&0.0\%	&7.8\% \\
+        3	&6.9\%	&27.6\%	&13.8\%	&13.8\%	&24.1\%	&0.0\%	&13.8\%	&0.0\% \\
+        4	&0.0\%	&0.0\%	&5.9\%	&0.0\%	&11.8\%	&17.6\%	&58.8\%	&5.9\% \\
+        5	&7.5\%	&0.0\%&	2.5\%	&10.0\%	&2.5\%&	72.5\%	&0.0\%	&5.0\%\\
+        6	&46.7\%	&6.7\%&	0.0\%	&0.0\%	&20.0\%&	20.0\%	&0.0\%	&6.7\% \\
+        7	&5.3\%	&0.0\%	&0.0\%	&0.0\%	&36.8\%	&15.8\%	&42.1\%	&0.0\%\\
+        9	&8.9\%	&0.0\%	&4.4\%	&8.9\%	&15.6\%&	33.3\%	&26.7\%	&2.2\%\\
+        10	&10.0\%	&0.0\%	&0.0\%	&20.0\%	&0.0\%&	0.0\%	&60.0\%	&10.0\%\\
+        MAX	&46.7\%	&27.6\%	&13.8\%	&20.0\%	&36.8\%&	72.5\%&	60.0\%	&26.7\% \\
+        MEAN	&12.7\%	&5.7\%	&4.6\%&	7.8\%&	15.1\%&	20.4\%	&24.6\%	&7.1\%\\
+        STDEV	&13.5\%	&9.4\%	&4.6\%	&8.1\%	&11.1\%&	23.7\% &24.2\%	&8.1\% \\
+      \bottomrule[1.5pt]
+    \end{tabular}
+    \label{tab:source_h5}
+  \end{table}
 
-% TODO Table 4.2
+\begin{table}[htb]
+    \caption{Distribution of the times cited of the sources}
+    \centering
+      \begin{tabular}{cccccccc}
+        \toprule[1.5pt]
+        \textbf{Paper No.} & \textbf{1000+} & \textbf{750-1000} & \textbf{500-750} & \textbf{250-500} & \textbf{50-250} & \textbf{10-50} & \textbf{<10} \\
+        \midrule[1pt]
+        1 & 14.3\% & 0.0\% & 0.0\% & 7.1\% & 28.6\% & 21.4\% & 28.6\%\\
+        2 & 8.5\% & 0.0\% & 4.3\% & 21.3\% & 42.6\% & 19.1\% & 4.3\%\\
+        3 & 3.7\% & 0.0\% & 0.0\% & 3.7\% & 22.2\% & 59.3\% & 11.1\%\\
+        4 & 23.5\% & 5.9\% & 0.0\% & 0.0\% & 11.8\% & 23.5\% & 35.3\%\\
+        5 & 7.5\% & 2.5\% & 12.5\% & 15.0\% & 32.5\% & 25.0\% & 5.0\%\\
+        6 & 22.2\% & 0.0\% & 0.0\% & 11.1\% & 44.4\% & 22.2\% & 0.0\%\\
+        7 & 10.5\% & 0.0\% & 5.3\% & 0.0\% & 26.3\% & 26.3\% & 31.6\%\\
+        9 & 15.6\% & 2.2\% & 6.7\% & 17.8\% & 31.1\% & 17.8\% & 8.9\%\\
+        10 & 0.0\% & 0.0\% & 10.0\% & 10.0\% & 0.0\% & 50.0\% & 30.0\%\\
+        MAX & 23.5\% & 5.9\% & 12.5\% & 21.3\% & 44.4\% & 59.3\% & 35.3\%\\
+        MEAN & 11.8\% & 1.2\% & 4.3\% & 9.6\% & 26.6\% & 29.4\% & 17.2\%\\
+        STDEV & 7.9\% & 2.0\% & 4.7\% & 7.6\% & 14.0\% & 14.7\% & 13.9\%\\
+      \bottomrule[1.5pt]
+    \end{tabular}
+    \label{tab:source_times_cited}
+  \end{table}
 
-% TODO Table 4.3
+As for sources, the distribution of the H5-indices of the sources of each research paper is listed in Table \ref{tab:source_h5}. On average, 74.5\% of the sources of each research paper are from conferences or journals with an H5-index greater than 13. In addition, averagely 5.7\% of the works cited are from journals or conferences with a small H5-index, but these journals and conferences are still published or organized by authoritative organizations like ACM and IEEE. 7.1\% of the sources are not from journals or conferences, but are also very reliable as they are PhD theses, academic monographs, technical reports, or international standards. The remainder of the sources are electronic preprints and websites describing software, which might not be perfectly credible as they were not peer-reviewed. The times that the sources were cited are illustrated in Table \ref{tab:source_times_cited}, where we can see that the majority of the sources (56\%) were cited 50 to 250 times, and 82.8\% of the sources were cited more than 10 times. It is safe to conclude from the statistics that most of the sources, except for the preprints and websites, are credible.
 
 The citation style guidelines the writers used are summarized in Section 4.3.1. A small fraction of the citations did not follow the style guides strictly. For example, in TXT2, when a citation involves multiple sources, only 14 out of 26 citations used the correct style. The mistakes can be divided into three categories. According to the ACM style guide which all papers except TXT1 and TXT5 followed, when the cited author is part of a sentence, the number of the citation should follow the cited author’s name directly, instead of being placed at the end of a sentence. For example, in the instance \textit{Lin et al. proposed a routing algorithm minimizing the weighted sum of the maximum and total channel lengths [11]} (TXT3), \textit{[11]} should be placed directly after Lin et al. The second mistake they made is that sequential parenthetical citations should be in the same square bracket like \textit{[1, 2]} in ACM style, but some of the writers put them in separate square brackets (e.g. TXT7 and TXT8). The third mistake they made is that there were missing or excessive spaces, periods, and commas around the parenthetical citations. For example, in TXT1, the writer mistakenly put a parenthetical citation after the period (\textit{Hence, the need to transition from IPv4 to IPv6 becomes quite urgent. [1]}, TXT1). In some cases, the writers put spaces around parenthetical citations while in others not, as shown in the following example:
 
 \textit{Existing translation technologies (such as IVI [2], NAT64 [3], etc.) and tunneling technologies (such as 6RD [4], Lightweight 4over6[5], etc.) provide possibilities for communication between IPv4/IPv6 single-stack devices.} (TXT1)
 
-We counted the number of citations in the body of the research papers and calculated the number of citations in the body per 1000 words as the citation density, which is illustrated in Table 4.4. The number ranges from 9.9 to 2.0, with an average of 5.8. These numbers are significantly lower than those reported in other research (Fazel \& Shi, 2015; Samraj, 2013; Wette, 2017), which is acceptable because research papers in some engineering disciplines are required to describe the method, experiment and results in great detail, while the literature review and discussion sections of the papers in these disciplines are relatively brief, thereby containing only a small number of citations. The variation of the papers is very large. As indicated in Table 4.4, some papers contain fewer citations (e.g. TXT 4 and TXT 10).
+We counted the number of citations in the body of the research papers and calculated the number of citations in the body per 1000 words as the citation density, which is illustrated in Table \ref{tab:citation_density}. The number ranges from 9.9 to 2.0, with an average of 5.8. These numbers are significantly lower than those reported in other research (Fazel \& Shi, 2015; Samraj, 2013; Wette, 2017), which is acceptable because research papers in some engineering disciplines are required to describe the method, experiment and results in great detail, while the literature review and discussion sections of the papers in these disciplines are relatively brief, thereby containing only a small number of citations. The variation of the papers is very large. As indicated in Table \ref{tab:citation_density}, some papers contain fewer citations (e.g. TXT 4 and TXT 10).
 
-%TODO Table 4.4
+\begin{table}[htb]
+    \caption{Citation density statistics}
+    \centering
+      \begin{tabular}{cccc}
+        \toprule[1.5pt]
+        \textbf{Paper No.} & \textbf{Total citations} & \textbf{Total words} & \textbf{Per 1k words} \\
+        \midrule[1pt]
+        1 & 14 & 2443 & 5.73 \\
+        2 & 42 & 5540 & 7.58\\
+        3 & 30 & 4241 & 7.07\\
+        4 & 9 & 4556 & 1.98\\
+        5 & 58 & 6342 & 9.15\\
+        6 & 14 & 3509 & 3.99\\
+        7 & 27 & 6833 & 3.95\\
+        9 & 59 & 5908 & 9.99\\
+        10 & 6 & 2163 & 2.77\\
+        MIN & - & - & 1.98\\
+        MAX & - & - & 9.99\\
+        AVERAGE & - & - & 5.8\\
+        
+      \bottomrule[1.5pt]
+    \end{tabular}
+    \label{tab:citation_density}
+  \end{table}
 \section{Citation Forms}
 \subsection{Style and Format}
-The research papers used in this study followed three different citation style guidelines in total, and these three guidelines are from the three largest research communities of Chinese CS researchers. As shown in Table 4.1, nine research papers followed the citation style guideline of the Association for Computing Machinery (ACM). One paper (TXT5) used APA style, which is mandatory by the Association for the Advancement of Artificial Intelligence (AAAI). One (TXT1) followed GB/T 7714-2015 (Information and Documentation Rules for Bibliographic References and Citations to Information Resources), the national recommended standard for citation style, which is widely used in theses, dissertations, and most periodicals in Chinese. The mistakes made in following style and format guidelines were discussed in Section 4.2.
+The research papers used in this study followed three different citation style guidelines in total, and these three guidelines are from the three largest research communities of Chinese CS researchers. As shown in Table ~\ref{tab:corpus_overview}, nine research papers followed the citation style guideline of the Association for Computing Machinery (ACM). One paper (TXT5) used APA style, which is mandatory by the Association for the Advancement of Artificial Intelligence (AAAI). One (TXT1) followed GB/T 7714-2015 (Information and Documentation Rules for Bibliographic References and Citations to Information Resources), the national recommended standard for citation style, which is widely used in theses, dissertations, and most periodicals in Chinese. The mistakes made in following style and format guidelines were discussed in Section 4.2.
 
 \subsection{Type of Forms}
-According to Thompson (2001), citations can be classified as either integral or non- integral citations. Integral citations are parts of a sentence while non-integral citations serve as annotations after a complete sentence. In accordance with Samraj (2013), most research papers and master theses contain more non-integral citations than integral citations. However, this is not the case for the papers in our corpus composed by CS graduate students. As shown in Table 4.5, integral citations (appeared 224 times in total) are much more frequently observed than non-integral citations (appeared 76 times in total) in these papers. The writers used naming (citation as a free-standing noun phrase, or following a linking verb) and verb controlling (citation following a notional verb) frequently to refer to other researchers’ works. For example, they often used naming (integral citation) to state the method they adopted, as shown in the following example:
+According to Thompson (2001), citations can be classified as either integral or non- integral citations. Integral citations are parts of a sentence while non-integral citations serve as annotations after a complete sentence. In accordance with Samraj (2013), most research papers and master theses contain more non-integral citations than integral citations. However, this is not the case for the papers in our corpus composed by CS graduate students. As shown in Table \ref{tab:citation_form}, integral citations (appeared 224 times in total) are much more frequently observed than non-integral citations (appeared 76 times in total) in these papers. The writers used naming (citation as a free-standing noun phrase, or following a linking verb) and verb controlling (citation following a notional verb) frequently to refer to other researchers’ works. For example, they often used naming (integral citation) to state the method they adopted, as shown in the following example:
 
 \textit{Existing decoding methods usually adopt the threshold (e.g. different amplitude ranges for different symbols in WiZig [3] and the signal similarity in WEBee [7]).} (TXT7)
 
-% TODO: Table 4.5
+\begin{table}[thb]
+    \caption{Citation form statistics}
+    \centering
+      \begin{tabular}{cccc}
+        \toprule[1.5pt]
+        \textbf{Paper No.} & \textbf{Integral / naming} & \textbf{Integral / verb controlling} & \textbf{Non-integral} \\
+        \midrule[1pt]
+        1 & 9 & 1 & 5 \\
+        2 & 15 & 5 & 22 \\
+        3 & 7 & 20 & 3 \\ 
+        4 & 3 & 1 & 5 \\
+        5 & 39 & 6 & 13 \\
+        6 & 13 & 0 & 1 \\
+        7 & 23 & 0 & 4 \\
+        8 & 2 & 14 & 1 \\
+        9 & 20 & 19 & 20 \\
+        10 & 4 & 0 & 2 \\ 
+        ALL & 158 & 66 & 76 \\
+        
+      \bottomrule[1.5pt]
+    \end{tabular}
+    \label{tab:citation_form}
+  \end{table}
 
 In literature review sections, the writers often need to use verb controlling integral citations to introduce the methods used in other works, instead of frequently introducing other people’s propositions. The following excerpt is a typical example of this use:
 
-\textit{Serban et al. [29] proposed a hierarchical end-to-end generative dialog system to model utterances and speech acts. (TXT9, X. Li et al., 2018)}
+\textit{Serban et al. [29] proposed a hierarchical end-to-end generative dialog system to model utterances and speech acts.} (TXT9, X. Li et al., 2018)
 
 Non-integral citations in the papers are largely limited to the circumstances where the writers wish to refer to a proposition by others, and the proportion of non-integral citations in our corpus is smaller compared with other disciplines in previous studies (Hyland, 1999; Samraj, 2013). A typical example of this kind of non-integral citation is:
 
 \textit{It has been observed that image data has various density in different parts of feature space (Socher et al. 2013; Guo et al. 2017a)} (TXT5, Yuchen et al., 2019)
 
 \subsection{Placement}
-As shown in the quantitative analysis in Table 4.6, most citations (79.1\%) appeared in the introduction section and related works section. There were a few citations in the method section (9.0\%) and the experiment and discussion section (11.9\%). For all the papers we analyzed, no one had any citation in the conclusion part. As explained by Mansourizadeh \& Ahmad (2011), for experimental papers the conclusion part is only a small section where the main findings are concluded and the concluding points are presented, therefore there is generally no need for citations.
+As shown in the quantitative analysis in Table \ref{tab:citation_function}, most citations (79.1\%) appeared in the introduction section and related works section. There were a few citations in the method section (9.0\%) and the experiment and discussion section (11.9\%). For all the papers we analyzed, no one had any citation in the conclusion part. As explained by Mansourizadeh \& Ahmad (2011), for experimental papers the conclusion part is only a small section where the main findings are concluded and the concluding points are presented, therefore there is generally no need for citations.
 
-% TODO: Table 4.6
+\begin{table}[thb]
+    \caption{Distribution of citations regarding functions}
+    \centering
+      \begin{tabulary}{\linewidth}{CCCCCCCC}
+        \toprule[1.5pt]
+        \textbf{Function} & \textbf{Introduction} & \textbf{Related Works} & \textbf{Preliminaries} & \textbf{Method} & \textbf{Experiment} & \textbf{Conclusion} & \textbf{ALL} \\
+        \midrule[1pt]
+        Attribution & 43 & 81 & 0 & 8 & 7 & 0 & 139\\
+        Exemplification & 17 & 5 & 0 & 0 & 3 & 0 & 25\\
+        Establishing links & 14 & 11 & 0 & 0 & 0 & 0 & 25\\
+        Further reference & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+        Statement of use & 5 & 0 & 0 & 4 & 12 & 0 & 21\\
+        Application & 4 & 0 & 0 & 3 & 0 & 0 & 7\\
+        Evaluation & 6 & 5 & 0 & 0 & 2 & 0 & 13\\
+        Comparison & 2 & 0 & 0 & 7 & 5 & 0 & 14\\
+        ALL & 91 & 102 & 0 & 22 & 29 & 0 & 244 \\
+      \bottomrule[1.5pt]
+    \end{tabulary}
+    \label{tab:citation_function}
+\end{table}
 
 \subsection{Reporting Verbs and Expressions}
 Some commonly used reporting verbs and expressions for citing propositions and findings of others are: \textit{according to, it is well accepted that, it is widely agreed that, it has been observed that, as suggested by, it is shown that, it is proven that}, and \textit{someone pointed out}. When comparing and evaluating multiple sources, commonly used expressions are: \textit{... is another ...., has similar settings, similar ... are also used in ...}. Since the most frequently adopted function of citation is to introduce or summarize the method, algorithm, technique or model used in other researchers’ works (\textit{Attribution}), most citations are in the form of a verb controlling integral citation, as exemplified by the following instance:
@@ -65,10 +195,10 @@ There are, however, more choices in the verbs to use for this kind of citation. 
 \textit{ESense [2] modulates symbols by packet lengths and accomplishes CTC from WiFi to ZigBee. HoWiEs [11] improves Esense by using combinations of WiFi packets. GSense [12] embeds symbols into gaps between customized packet preambles.} (TXT7)
 
 \section{Citation Functions}
-Seven out of eight functions in the typology of Petrić (2007) have been identified in the corpus. The frequencies and distribution of these functions of citations are shown in Table 4.6.
+Seven out of eight functions in the typology of Petrić (2007) have been identified in the corpus. The frequencies and distribution of these functions of citations are shown in Table \ref{tab:citation_function}.
 
 \subsection{Attribution}
-Citations of attribution are used to attribute information (a conclusion, proposition, hypothesis, or remark) or activity (to propose a new method, to define a new concept, or to propose a new research problem) (Petrić, 2007), and attribution is the most common type in our corpus. Only when the writer attributed in order to introduce the background or support his or her own argument was the citation be classified as Attribution, otherwise it was classified as Statement of Use, Application, or others. As mentioned in Section 4.2, we speculate that many CS studies rely heavily on previous methods in order to propose new methods. Therefore, a large portion of citations were used to introduce other works. In addition to describing related methods, when stating the problem background and the rationale of their proposed solutions, the writers relied on the theories and findings of previous research. This explains why citations of attribution are mainly distributed in the introduction, rationale, and literature review sections. The overall distribution statistics are shown in Table 4.6. Most of the citations of this type are in the introduction (30.9\%) section and the related works section (58.3\%).
+Citations of attribution are used to attribute information (a conclusion, proposition, hypothesis, or remark) or activity (to propose a new method, to define a new concept, or to propose a new research problem) (Petrić, 2007), and attribution is the most common type in our corpus. Only when the writer attributed in order to introduce the background or support his or her own argument was the citation be classified as Attribution, otherwise it was classified as Statement of Use, Application, or others. As mentioned in Section 4.2, we speculate that many CS studies rely heavily on previous methods in order to propose new methods. Therefore, a large portion of citations were used to introduce other works. In addition to describing related methods, when stating the problem background and the rationale of their proposed solutions, the writers relied on the theories and findings of previous research. This explains why citations of attribution are mainly distributed in the introduction, rationale, and literature review sections. The overall distribution statistics are shown in Table \ref{tab:citation_function}. Most of the citations of this type are in the introduction (30.9\%) section and the related works section (58.3\%).
 
 \subsection{Exemplification}
 This kind of citations was signified by \textit{for example} and was used to provide examples (Petrić, 2007), and consists of 10.2\% of all citations. Here is an instance:

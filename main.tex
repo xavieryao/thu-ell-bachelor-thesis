@@ -12,12 +12,21 @@
 \usepackage{fmtcount}
 \usepackage{tabulary}
 
-
 % 定义所有的图片文件在 figures 子目录下
 \graphicspath{{figures/}}
 
 % 可以在这里修改配置文件中的定义。导言区可以使用中文。
 % \def\myname{薛瑞尼}
+
+\newcommand{\engchapter}[1]{
+    \renewcommand{\thechapter}{\Numberstring{chapter}}
+    \chapter{#1}
+    \renewcommand{\thechapter}{\arabic{chapter}}
+}
+
+\newcommand{\citebelong}[1]{
+    \citeauthor{#1}'s \citeyearpar{#1}
+}
 
 \begin{document}
 
@@ -37,11 +46,6 @@
 
 %%% 正文部分
 
-\newcommand{\engchapter}[1]{
-    \renewcommand{\thechapter}{\Numberstring{chapter}}
-    \chapter{#1}
-    \renewcommand{\thechapter}{\arabic{chapter}}
-}
 \input{data/chap01}
 \input{data/chap02}
 \input{data/chap03}
@@ -62,7 +66,7 @@
 %% 参考文献
 % 只能选择一种参考文献格式
 %\bibliographystyle{thuthesis-numeric}      % 顺序编码制
-\bibliographystyle{thuthesis-author-year}  % 著者-出版年制
+\bibliographystyle{apalike}  % 著者-出版年制
 % \bibliographystyle{thuthesis-bachelor}     % 本科生参考文献的著录格式
 \bibliography{ref/refs}
 
